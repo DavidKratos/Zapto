@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS requests (
+ id TEXT PRIMARY KEY,
+ created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+ payload TEXT NOT NULL,
+ email_status TEXT NOT NULL,
+ sms_status TEXT NOT NULL
+);
