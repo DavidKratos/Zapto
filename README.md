@@ -51,7 +51,7 @@ For a visual-only preview, open `public/index.html`. API routes require the Verc
 The integration code is present, but email  are **not active**. The form only enables online submission when server configuration is present and a visitor completes Turnstile.
 
 1. Connect Neon Postgres to the Vercel project. Set its connection string as `DATABASE_URL` and run `schema.sql` once in the Neon SQL editor.
-2. Configure a verified Resend sender. Set `RESEND_API_KEY` and `EMAIL_FROM` in Vercel environment settings.
+2. Set `RESEND_API_KEY` and `EMAIL_FROM` in Vercel environment settings. For initial testing to the Resend account owner email, use `Zapto <onboarding@resend.dev>`. For your own sender address, verify its domain in Resend first. Never use the placeholder `yourdomain.com`.
 3. SMS is disabled for this release. Twilio configuration is not required.
 4. Configure Cloudflare Turnstile for the live hostname. Set `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY`.
 5. Redeploy after environment changes, then submit one controlled test request and confirm actual email  receipt.
